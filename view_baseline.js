@@ -1,11 +1,23 @@
 // Configuration
 show_starter_dialogs = false // set this to "false" to disable the survey and 3-minute timer. Set to "true" before submitting to MTurk!!
 
-function open_definitions_dialog() {
-    // Assuming 'definitions-dialog' is the ID of the dialog you want to open with definitions
-    $("#definitions-dialog").dialog("open");
-}
+//make definition dialog
+def_dialog = define_new_dialog('defdialog', title='Helpful Definitions:', options = {
+    // The following are standard jquery-ui options. See https://jqueryui.com/dialog/
+    height: 970,
+    width: 400,
+    buttons: {     
+        OK:{
+            text: "Close",
+            id: "perm-dialog-ok-button",
+            click: function() {
+                $( this ).dialog( "close" );
+            }
+        } 
+    }
 
+    
+})
 
 // ---- Set up main Permissions dialog ----
 
@@ -17,7 +29,7 @@ perm_dialog = define_new_dialog('permdialog', title='Change the Permissions Here
     width: 400,
     buttons: {
         Advanced: {
-            text: "More Permissions",
+            text: "Advanced Permissions",
             id: "perm-dialog-advanced-button",
             click: function() {
                 open_advanced_dialog(perm_dialog.attr('filepath'))
@@ -28,12 +40,13 @@ perm_dialog = define_new_dialog('permdialog', title='Change the Permissions Here
             text: "Helpful Definitions",
             id: "perm-dialog-definitions-button",
             click: function() {
-                open_definitions_dialog()
+                $('#defdialog').html("<h2> Advanced Permissions: </h2> <p>The Advanced Permissions button will take you to the advanced secruity settings. When you click the edit more permissions button, you will directed to a more extensive list of permissions.</p> <h2>Permissions:</h2>  <p>In file systems and databases, permissions determine who can access an object (like a file or folder) and what they can do with it (read it, modify it, delete it, etc.).</p> <h2>Inheritable permissions:</h2> <p>Some systems allow permissions to be \"inherited\". This means that a file or folder can receive permissions based on the permissions of its parent folder. So, if you have a folder that's set to be readable by a certain user, all the files and subfolders inside that folder might automatically be readable by that user too, if they inherit permissions from the parent folder.</p> <h2>This object's parent:</h2> <p>This refers to the folder (or sometimes another type of object) immediately above the current object in the hierarchy. If you think of your file system as a tree, the \"parent\" of any given file or folder is the folder it's directly inside of.</p> <h2>Example Explained:</h2> <p>When a user tries to do something (read, modify, delete, change permissions, …) to a file: First: Look at all of the direct (i.e. not inherited) permissions that are set on this file for this user OR for any groups that this user is part of. if any of these are set to deny permission, then permission is denied. (otherwise) if any of these are set to allow the permission, then the action is allowed to happen. If (a) there were no direct permissions for this user, AND (b) inheritance is turned on for this file/folder, repeat the process above using the permissions for the parent folder. Lastly: if you have exhausted the options available via inheritance, and still have not found any relevant permission settings, then permission is denied.</p>");
+                $(`#defdialog`).dialog("open");
             }
         },
         
         OK:{
-            text: "Make Changes",
+            text: "Save Changes",
             id: "perm-dialog-ok-button",
             click: function() {
                 $( this ).dialog( "close" );
@@ -251,8 +264,6 @@ function open_advanced_dialog(file_path) {
         $('#adv_perm_inheritance').prop('checked', false)
     }
 
-
-
     // permissions list for permissions tab:
     let users = get_file_users(file_obj)
     for(let u in users) {
@@ -280,6 +291,14 @@ function open_advanced_dialog(file_path) {
     $(`#advdialog`).dialog('open')
 }
 
+
+
+//open definition dialog
+function open_definitions_dialog() {
+    // Assuming 'definitions-dialog' is the ID of the dialog you want to open with definitions
+    $(`#defdialog`).dialog('open');
+}
+    
 // Update Effective User display
 function update_effective_user() {
     $('.effectivecheckcell').empty()
