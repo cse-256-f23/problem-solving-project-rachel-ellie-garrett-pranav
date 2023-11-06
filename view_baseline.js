@@ -33,7 +33,7 @@ perm_dialog = define_new_dialog('permdialog', title='Permissions', options = {
         },
         
         OK:{
-            text: "Make Changes & Exit",
+            text: "Make Changes",
             id: "perm-dialog-ok-button",
             click: function() {
                 $( this ).dialog( "close" );
@@ -160,7 +160,7 @@ perm_remove_user_button.click(function(){
 
 // --- Append all the elements to the permissions dialog in the right order: --- 
 perm_dialog.append(obj_name_div)
-perm_dialog.append($('<div id="permissions_user_title">Select a group or user:</div>'))
+perm_dialog.append($('<div id="permissions_user_title">Click on the User for their Permissions status:</div>'))
 perm_dialog.append(file_permission_users)
 perm_dialog.append(perm_add_user_select)
 perm_add_user_select.append(perm_remove_user_button) // Cheating a bit again - add the remove button the the 'add user select' div, just so it shows up on the same line.
