@@ -11,13 +11,13 @@ function open_definitions_dialog() {
 
 // --- Create all the elements, and connect them as needed: ---
 // Make permissions dialog:
-perm_dialog = define_new_dialog('permdialog', title='Permissions', options = {
+perm_dialog = define_new_dialog('permdialog', title='Change the Permissions Here:', options = {
     // The following are standard jquery-ui options. See https://jqueryui.com/dialog/
     height: 500,
     width: 400,
     buttons: {
         Advanced: {
-            text: "Advanced Permissions",
+            text: "More Permissions",
             id: "perm-dialog-advanced-button",
             click: function() {
                 open_advanced_dialog(perm_dialog.attr('filepath'))
@@ -44,7 +44,7 @@ perm_dialog = define_new_dialog('permdialog', title='Permissions', options = {
 
 // Make the initial "Object Name:" text:
 // If you pass in valid HTML to $(), it will *create* elements instead of selecting them. (You still have to append them, though)
-obj_name_div = $('<div id="permdialog_objname" class="section">Object Name: <span id="permdialog_objname_namespan"></span> </div>')
+obj_name_div = $('<div id="permdialog_objname" class="section">File Name: <span id="permdialog_objname_namespan"></span> </div>')
 
 //Make the div with the explanation about special permissions/advanced settings:
 advanced_expl_div = $('<div id="permdialog_advanced_explantion_text">For special permissions or advanced settings, click Advanced. (Hint: if the checks are grey that may mean you need to edit permissions in the parent oject.) </div>')
