@@ -1,6 +1,12 @@
 // Configuration
 show_starter_dialogs = false // set this to "false" to disable the survey and 3-minute timer. Set to "true" before submitting to MTurk!!
 
+function open_definitions_dialog() {
+    // Assuming 'definitions-dialog' is the ID of the dialog you want to open with definitions
+    $("#definitions-dialog").dialog("open");
+}
+
+
 // ---- Set up main Permissions dialog ----
 
 // --- Create all the elements, and connect them as needed: ---
@@ -10,20 +16,29 @@ perm_dialog = define_new_dialog('permdialog', title='Permissions', options = {
     height: 500,
     width: 400,
     buttons: {
-        OK:{
-            text: "Make Changes & Exit",
-            id: "perm-dialog-ok-button",
-            click: function() {
-                $( this ).dialog( "close" );
-            }
-        },
         Advanced: {
             text: "Advanced Permissions",
             id: "perm-dialog-advanced-button",
             click: function() {
                 open_advanced_dialog(perm_dialog.attr('filepath'))
             }
-        }
+        },
+
+        Important: {
+            text: "Helpful Definitions",
+            id: "perm-dialog-definitions-button",
+            click: function() {
+                open_definitions_dialog()
+            }
+        },
+        
+        OK:{
+            text: "Make Changes & Exit",
+            id: "perm-dialog-ok-button",
+            click: function() {
+                $( this ).dialog( "close" );
+            }
+        } 
     }
 })
 
