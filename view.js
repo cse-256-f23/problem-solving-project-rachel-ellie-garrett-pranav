@@ -1,5 +1,26 @@
 // ---- Define your dialogs  and panels here ----
 
+//definitions panel
+$('#sidepanel').html(`<h1>Helpful Definitions</h1>
+                    <h2>Advanced Permissions: </h2>
+                        <p>The Advanced Permissions button will take you to the advanced secruity settings.
+                        When you click the edit more permissions button, you will directed to a more extensive list of permissions.</p>
+                    <h2>Permissions:</h2>
+                        <p>In file systems and databases, permissions determine who can access an object (like a file or folder)
+                        and what they can do with it (read it, modify it, delete it, etc.).</p>
+                    <h2>Inheritable permissions:</h2>
+                        <p>Some systems allow permissions to be \"inherited\". This means that a file or folder can receive permissions based on the permissions of its parent folder.
+                        So, if you have a folder that's set to be readable by a certain user, all the files and subfolders inside that folder might automatically be readable by that user too,
+                        if they inherit permissions from the parent folder.</p>
+                    <h2>This object's parent:</h2>
+                        <p>This refers to the folder (or sometimes another type of object) immediately above the current object in the hierarchy.
+                        If you think of your file system as a tree, the \"parent\" of any given file or folder is the folder it's directly inside of.</p>
+                    <h2>Example Explained:</h2>
+                        <p>When a user tries to do something (read, modify, delete, change permissions, …) to a file: First: Look at all of the direct (i.e. not inherited)
+                        permissions that are set on this file for this user OR for any groups that this user is part of. if any of these are set to deny permission, then permission is denied.
+                        (otherwise) if any of these are set to allow the permission, then the action is allowed to happen. If (a) there were no direct permissions for this user,
+                        AND (b) inheritance is turned on for this file/folder, repeat the process above using the permissions for the parent folder. Lastly: if you have exhausted the options available via inheritance,
+                        and still have not found any relevant permission settings, then permission is denied.</p>`);
 
 
 // ---- Display file structure ----
