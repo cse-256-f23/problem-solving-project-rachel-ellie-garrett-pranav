@@ -1,5 +1,21 @@
 // ---- Define your dialogs  and panels here ----
 
+
+$('#toprightsidepanel').html(`
+    <div class="definitions">
+        <h1>Notes</h1>
+        <ul>
+            <div class="definition">
+                <li> You CAN keep going back to look at the question to ensure that you are allowing
+                and/or denying the correct permissions</li>
+                <li> Ensure that you are changing the permissions in the CORRECT folder</li>
+                <li> Read_Execute is more than just reading, so read directions carefully</li>
+             </div>
+        </ul>
+
+    </div>
+    `);
+
 //definitions panel
 // $('#sidepanel').html(`<h1>Helpful Definitions</h1>
 //                     <h2>Advanced Permissions: </h2>
@@ -67,13 +83,33 @@ style.type = 'text/css';
 
 
 var css = `
+
+#filestructure, #toprightsidepanel {
+    display: inline-block;
+    width: 50%;
+    vertical-align: top; 
+}
+
+#toprightsidepanel {
+    font-family: Arial, sans-serif;
+    padding: 15px;
+    background-color: #f8f8f8;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    z-index: 100;
+}
+
+
 #sidepanel {
     font-family: Arial, sans-serif;
     padding: 15px;
     background-color: #f8f8f8;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    display: block;
+    width: 50%;
 }
+
 
 .definitions h1 {
     color: #333;
