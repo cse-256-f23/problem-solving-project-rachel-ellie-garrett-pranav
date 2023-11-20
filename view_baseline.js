@@ -172,6 +172,7 @@ perm_remove_user_button.click(function(){
 
 
 // --- Append all the elements to the permissions dialog in the right order: --- 
+perm_dialog.append($('<div id="permissions_user_title">[HINT: the elements before the slash leading up to the name of the file you are currently show the location of the file]</div>'))
 perm_dialog.append(obj_name_div)
 perm_dialog.append($('<div id="permissions_user_title">Click on a User for their Permissions status:</div>'))
 perm_dialog.append(file_permission_users)
