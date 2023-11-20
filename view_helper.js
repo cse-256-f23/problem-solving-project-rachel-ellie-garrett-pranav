@@ -520,5 +520,4 @@ $('#filestructure').css({
 })
 
 $('#filestructure').after('<div id="toprightsidepanel" style="display:inline-block;width:45%"></div>');
-$('#filestructure').parent().append('<div id="sidepanel"></div>');
 //$('#filestructure').after('<div id="sidepanel" style="display:inline-block;width:49%"></div>')
