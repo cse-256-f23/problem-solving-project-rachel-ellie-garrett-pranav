@@ -3,13 +3,20 @@
 
 $('#toprightsidepanel').html(`
     <div class="definitions">
-        <h1>Notes</h1>
+        <h1>Helpful Tips:</h1>
         <ul>
             <div class="definition">
-                <li> You CAN keep going back to look at the question to ensure that you are allowing
-                and/or denying the correct permissions</li>
+                <li > Frequently look at the Prompt to ensure that the correct permissions are set</li>
+                <br>
                 <li> Ensure that you are changing the permissions in the CORRECT folder</li>
-                <li> Read_Execute is more than just reading, so read directions carefully</li>
+                <br>
+                <li> Read_Execute has more functionalities than Read, so read directions carefully</li>
+                <br>
+                <li> Sometimes, you might just be overthinking it. Keep it Simple!!!</li>
+                <br>
+                <li> Suggestion 1: First, identify the Folder. Next, select the correct User. Finally, set the correct Permissions.</li>
+                <br>
+                <li> Suggestion 2: Take ~30 seconds(or even a minute) to deeply understand the prompt and play around with the application.</li>
              </div>
         </ul>
 
@@ -42,32 +49,32 @@ $('#toprightsidepanel').html(`
 // // ---- Display file structure ----
 $('#sidepanel').html(`
     <div class="definitions">
-        <h1>Helpful Definitions</h1>
+        <h1>Definitions:</h1>
 
-        <div class="definition">
+        <div class="definition1">
             <h2>Advanced Permissions:</h2>
             <p>The Advanced Permissions button will take you to the advanced security settings. When you click the edit more permissions button, you will be directed to a more extensive list of permissions.</p>
         </div>
 
-        <div class="definition">
+        <div class="definition1">
             <h2>Permissions:</h2>
             <p>In file systems and databases, permissions determine who can access an object (like a file or folder) and what they can do with it (read it, modify it, delete it, etc.).</p>
         </div>
 
-        <div class="definition">
+        <div class="definition1">
             <h2>Inheritable Permissions:</h2>
             <p>Some systems allow permissions to be \"inherited\". This means that a file or folder can receive permissions based on the permissions of its parent folder.
                                      So, if you have a folder that's set to be readable by a certain user, all the files and subfolders inside that folder might automatically be readable by that user too,
                                      if they inherit permissions from the parent folder.</p>
         </div>
 
-        <div class="definition">
+        <div class="definition1">
             <h2>This Object's Parent:</h2>
             <p>This refers to the folder (or sometimes another type of object) immediately above the current object in the hierarchy.
                                     If you think of your file system as a tree, the \"parent\" of any given file or folder is the folder it's directly inside of.</p>
         </div>
 
-        <div class="definition">
+        <div class="definition1">
             <h2>Example Explained:</h2>
             <p>When a user tries to do something (read, modify, delete, change permissions, …) to a file: First: Look at all of the direct (i.e. not inherited)
                                     permissions that are set on this file for this user OR for any groups that this user is part of. if any of these are set to deny permission, then permission is denied.
@@ -117,6 +124,15 @@ var css = `
 }
 
 .definition {
+    background-color: #fff;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    font-size: 20px;
+}
+
+.definition1 {
     background-color: #fff;
     padding: 10px;
     margin-bottom: 10px;
