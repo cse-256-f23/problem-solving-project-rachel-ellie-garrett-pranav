@@ -1,5 +1,9 @@
 // ---- Define your dialogs  and panels here ----
 
+
+
+
+
 let tip_hide = true;
 let def_hide = true;
 
@@ -26,8 +30,23 @@ function showDefs() {
 
 
 $('#toprightsidepanel').html(`
+
+    <div class=definition2>
+    <h1>Please Read the Following Before Starting:</h1>
+    <br>
+    <h2>Step 1: Take around 30 seconds making sure you truly understand the prompt. Identify the task to be completed in the prompt.
+    </h2>
+    <br>
+    <h2>Step 2: Take around 15 seconds clearly identifying the File/Folder, User & Permission Status to be worked on.  
+    </h2>
+    <br>
+    <h2>Step 3: You are now good to begin! Remember to look at the Hints.
+    </h2>
+    
+    </div>
+
     <div id="tips" class="definition1">
-    <h1 id="tip-header">Helpful Tips (Click to Show):</h1>
+    <h3 id="tip-header">Helpful Tips (Click to Show):</h3>
     <div id="tip-list" style="display:none">
         <br>
 
@@ -47,20 +66,13 @@ $('#toprightsidepanel').html(`
         <h3>Sometimes, you might just be overthinking it. Keep it Simple!!!</h3>
         </div>
 
-        <div class=definition1>
-        <h3>Suggestion 1: First, identify the Folder. Next, select the correct User. Finally, set the correct Permissions.</h3>
-        </div>
-
-        <div class=definition1>
-        <h3>Suggestion 2: Take ~30 seconds(or even a minute) to deeply understand the prompt and play around with the application.</h3>
-        </div>
     </div>
     </div>
 
     <br>
 
     <div id="defs" class=definition1>
-        <h1 id="def-header">Definitions (Click to Show):</h1>
+        <h3 id="def-header">Definitions (Click to Show):</h3>
 
         <div id="def-list" style="display:none">
         <br>
@@ -97,6 +109,25 @@ $('#toprightsidepanel').html(`
         </div>
         </div>
     </div>
+
+    <div class=definition2>
+    <h4>(Temporary Reference) User Steps:</h4>
+
+    <h4>Task 1:</h4>
+    <h4>Task 2: intern_permissions: 1. Click on intern_subproject. 2. Click on intern. 3.  Select 'Allow' for 'Write'. 4. Finished.</h4>
+    <h4>Task 3:</h4>
+    </div>
+
+    <div class=definition2>
+    <h4>(Temporary) What changes should we make?:</h4>
+
+    <h4> - Remove excessive wordings. It can be overloading for the user. For example, we don't need the "Hint" in 
+    the top of the dialog box. </h4>
+    <h4> - Maybe say there is no need to do anything for delete files(in case User gets confused) for Task 2.</h4>
+    <h4> - Maybe have a list of hints in the dialog box that can guide user</h4>
+
+    </div>
+
     `);
 
 $(document).on('click', '#tip-header', showTips);
@@ -212,6 +243,14 @@ var css = `
 }
 
 .definition1 {
+    background-color: #fff;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.definition2 {
     background-color: #fff;
     padding: 10px;
     margin-bottom: 10px;
