@@ -60,7 +60,8 @@ perm_dialog = define_new_dialog('permdialog', title='Change the Permissions Here
 obj_name_div = $('<div id="permdialog_objname" class="section">File Name: <span id="permdialog_objname_namespan"></span> </div>')
 
 //Make the div with the explanation about special permissions/advanced settings:
-advanced_expl_div = $('<div id="permdialog_advanced_explantion_text">For special permissions or advanced settings, click Advanced. (Hint: if the checks are grey that may mean you need to edit permissions in the parent oject.) </div>')
+advanced_expl_div = $('<div id="permdialog_advanced_explantion_text"> Hint: No Action is needed to set a Permisison to Not Delete</div>')
+//Removed these lines: For special permissions or advanced settings, click Advanced. (Hint: if the checks are grey that may mean you need to edit permissions in the parent oject.)
 
 // Make the (grouped) permission checkboxes table:
 grouped_permissions = define_grouped_permission_checkboxes('permdialog_grouped_permissions')
@@ -78,6 +79,7 @@ file_permission_users.css({
 // Make button to add a new user to the list:
 perm_add_user_select = define_new_user_select_field('perm_add_user', 'Add Empolyee', on_user_change = function(selected_user){
     let filepath = perm_dialog.attr('filepath')
+    
     if(selected_user && (selected_user.length > 0) && (selected_user in all_users)) { // sanity check that a user is actually selected (and exists)
         let expected_user_elem_id = `permdialog_file_user_${selected_user}`
         if( file_permission_users.find(`#${expected_user_elem_id}`).length === 0 ) { // if such a user element doesn't already exist
