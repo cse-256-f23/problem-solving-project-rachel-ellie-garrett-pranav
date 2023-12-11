@@ -185,9 +185,11 @@ $('#toprightsidepanel').html(`
 
 <div class="section user-steps">
    <h4>User Steps:</h4>
-     <p>Task 1:</p>
+     <p>Task 1: add_full_permissions: 1. Click on presentation_documents. 2. Click on Add Employee & on new_manager 3. Click on 'Allow' for "Full_control" 4. Finished</p>
+     <br>
      <p>Task 2: intern_permissions: 1. Click on intern_subproject. 2. Click on intern. 3. Select 'Allow' for 'Write'. 4. Finished.</p>
-     <p>Task 3:</p>
+     <br>
+     <p>Task 3: lost_inheritance: </p>
  </div>
 
  <div class="section feedback">
