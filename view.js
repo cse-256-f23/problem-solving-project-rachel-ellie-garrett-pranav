@@ -142,7 +142,7 @@ $('#toprightsidepanel').html(`
         <ol>
             <li><strong>Understand the Prompt:</strong> Take around 30 seconds to make sure you truly understand the prompt. Identify the task to be completed.</li>
             <li><strong>Identify Details:</strong> Spend about 15 seconds clearly identifying the File/Folder, User & Permission Status to be worked on.</li>
-            <li><strong>Begin the Task:</strong> You are now good to begin! Remember to look at the Hints.</li>
+            <li><strong>Begin the Task:</strong> You are now good to begin! Remember to look at the Hints and that you can keep reviewing the prompt.</li>
         </ol>
     </div>
 
@@ -189,7 +189,7 @@ $('#toprightsidepanel').html(`
      <br>
      <p>Task 2: intern_permissions: 1. Click on intern_subproject. 2. Click on intern. 3. Select 'Allow' for 'Write'. 4. Finished.</p>
      <br>
-     <p>Task 3: lost_inheritance: </p>
+     <p>Task 3: lost_inheritance: This one is tricky! Pay attention to the different lectures: 1. Notice that lecture 2 and 3 don’t have any users (aka the files are not accessible to them) 2. Based on the question you should add the administrator, professor, and TA 3. Now you should go into advanced permissions and allow permissions 2-10! 4. Save your changes and you have completed the assignment  </p>
  </div>
 
  <div class="section feedback">
