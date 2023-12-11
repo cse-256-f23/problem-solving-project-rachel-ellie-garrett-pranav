@@ -182,13 +182,14 @@ $('#toprightsidepanel').html(`
         </dl>
     </div>
     </div>
-
+    <br>
+    <br>
 <div class="section user-steps">
 
-   <h4>Hints to help with tasks:</h4>
-     <p>Task 1: add_full_permissions: 1. Click on the file that is specified in the question 2. Add new_manager 3. Click on 'Allow' for "Full_control" 4. Finished</p>
+   <h3>Hints to help with tasks (Please Read!):</h3>
+     <p><span style="color:0a5ab3">Task 1:</span> add_full_permissions: Make sure to carefully read the name of the file specified in the question! Also make sure to note which permissions need to be granted. There may be a permission that can grant all the necessary control to your user!</p>
      <br>
-     <p>Task 2: intern_permissions: 1. Click on the file that is specified in the question 2. Click on intern. 3. Select 'Allow' for 'Write'. 4. Finished.</p>
+<p>Task 2: intern_permissions: Once again, make sure to check the name of the specified object, it can also be a folder! And make sure not to grant too many permissions, less is more!</p>
      <br>
      <p>Task 3: lost_inheritance: This one is tricky! Pay attention to the different lectures: 1. Notice that lecture 2 and 3 don’t have any users (aka the files are not accessible to them) 2. Based on the question you should add the administrator, professor, and TA 3. Now you should go into advanced permissions and allow permissions 2-10! 4. Save your changes and you have completed the assignment  </p>
  </div>
