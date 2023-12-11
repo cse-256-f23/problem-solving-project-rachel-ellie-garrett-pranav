@@ -182,6 +182,25 @@ $('#toprightsidepanel').html(`
         </dl>
     </div>
     </div>
+
+<div class="section user-steps">
+   <h4>User Steps:</h4>
+     <p>Task 1:</p>
+     <p>Task 2: intern_permissions: 1. Click on intern_subproject. 2. Click on intern. 3. Select 'Allow' for 'Write'. 4. Finished.</p>
+     <p>Task 3:</p>
+ </div>
+
+ <div class="section feedback">
+     <h4>Suggestions for Improvement:</h4>
+     <ul>
+         <li>Remove excessive wordings to avoid user overload. For example, the "Hint" at the top of the dialog box is not necessary.</li>
+         <li>Clarify that no action is needed for deleting files in Task 2, if required.</li>
+         <li>Consider including a list of hints in the dialog box to guide the user.</li>
+     </ul>
+ </div>
+
+ </div>
+
 </div>
 
 
@@ -194,24 +213,6 @@ $('#toprightsidepanel').html(`
     `);
 
 
-
-//     <div class="section user-steps">
-//     <h4>User Steps:</h4>
-//     <p>Task 1:</p>
-//     <p>Task 2: intern_permissions: 1. Click on intern_subproject. 2. Click on intern. 3. Select 'Allow' for 'Write'. 4. Finished.</p>
-//     <p>Task 3:</p>
-// </div>
-
-// <div class="section feedback">
-//     <h4>Suggestions for Improvement:</h4>
-//     <ul>
-//         <li>Remove excessive wordings to avoid user overload. For example, the "Hint" at the top of the dialog box is not necessary.</li>
-//         <li>Clarify that no action is needed for deleting files in Task 2, if required.</li>
-//         <li>Consider including a list of hints in the dialog box to guide the user.</li>
-//     </ul>
-// </div>
-
-// </div>
 
 
 
