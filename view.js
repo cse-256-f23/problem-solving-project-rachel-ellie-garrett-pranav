@@ -184,22 +184,15 @@ $('#toprightsidepanel').html(`
     </div>
 
 <div class="section user-steps">
-   <h4>User Steps:</h4>
-     <p>Task 1: add_full_permissions: 1. Click on presentation_documents. 2. Click on Add Employee & on new_manager 3. Click on 'Allow' for "Full_control" 4. Finished</p>
+
+   <h4>Hints to help with tasks:</h4>
+     <p>Task 1: add_full_permissions: 1. Click on the file that is specified in the question 2. Add new_manager 3. Click on 'Allow' for "Full_control" 4. Finished</p>
      <br>
-     <p>Task 2: intern_permissions: 1. Click on intern_subproject. 2. Click on intern. 3. Select 'Allow' for 'Write'. 4. Finished.</p>
+     <p>Task 2: intern_permissions: 1. Click on the file that is specified in the question 2. Click on intern. 3. Select 'Allow' for 'Write'. 4. Finished.</p>
      <br>
      <p>Task 3: lost_inheritance: This one is tricky! Pay attention to the different lectures: 1. Notice that lecture 2 and 3 don’t have any users (aka the files are not accessible to them) 2. Based on the question you should add the administrator, professor, and TA 3. Now you should go into advanced permissions and allow permissions 2-10! 4. Save your changes and you have completed the assignment  </p>
  </div>
 
- <div class="section feedback">
-     <h4>Suggestions for Improvement:</h4>
-     <ul>
-         <li>Remove excessive wordings to avoid user overload. For example, the "Hint" at the top of the dialog box is not necessary.</li>
-         <li>Clarify that no action is needed for deleting files in Task 2, if required.</li>
-         <li>Consider including a list of hints in the dialog box to guide the user.</li>
-     </ul>
- </div>
 
  </div>
 
